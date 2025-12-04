@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.Tarea.__12;
+package com.salesianostriana.dam.tarea04_12;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
