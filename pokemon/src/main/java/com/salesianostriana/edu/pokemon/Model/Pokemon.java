@@ -2,7 +2,6 @@ package com.salesianostriana.edu.pokemon.Model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.extern.java.Log;
 
 import java.time.LocalDate;
 
@@ -18,14 +17,20 @@ public class Pokemon {
     @Id
     private Long id;
 
+    @Column(name = "nombrePokemon", nullable = true, length = 150)
     private String nombrePokemon;
-    private LocalDate diaDeCreacion;
+
+    @Column(name = "descripcionPokemon", nullable = false, length = 255)
     private String descripcionPokemon;
 
+    @Enumerated(EnumType.STRING)
+    private TipoAtaque tipoAtaque;
 
+    @Enumerated(EnumType.STRING)
+    private TipoPokemon tipoPokemon;
 
     @ManyToOne
-    @JoinColumn(name = "tipo_id")
-    private TipoPokemon tipoPokemon;
+    @JoinColumn(name = "entrenador_id")
+    private Entrenador entrenador;
 
 }
