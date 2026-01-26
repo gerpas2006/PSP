@@ -8,7 +8,8 @@ import java.time.LocalTime;
 public record SalaDatails(
         Integer planta,
         String nombre,
-        Integer capacidad,
+        Integer capacidadMax,
+        Integer capacidadMin,
         boolean disponible,
         reservaSimple reserva
 

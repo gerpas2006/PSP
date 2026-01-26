@@ -14,7 +14,7 @@ public interface SalaSpec {
                 planta == null ? criteriaBuilder.and() :criteriaBuilder.equal(from.get("planta"),planta);
     }
 
-    static PredicateSpecification<Sala> filtarPorCapacida(Integer capMax){
+    static PredicateSpecification<Sala> filtarPorCapacida(Integer capMax,Integer capMin){
         Integer capMaxReal = capMax == null ? 0 : capMax;
         Integer capMinReal = capMin == null ? 0 : capMin;
         return (from, criteriaBuilder) ->
